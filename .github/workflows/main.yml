@@ -1,0 +1,31 @@
+name: Build and Deploy Zola
+
+on:
+  push:
+    branches:
+      - main  # Set this to your main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          submodules: true  # Necessary if your Zola theme is a submodule
+
+      - name: Install Zola
+        run: |
+          sudo snap install --edge zola
+          zola build
+
+      - name: SCP Transfer Files
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "public/*"
+          target: ${{ secrets.TARGET_DIR }}
+          strip_components: 1  # Removes "public/" from the path during copy
+          overwrite: true
