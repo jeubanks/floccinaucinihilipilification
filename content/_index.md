@@ -2,9 +2,9 @@
 title = "Latest posts"
 
 [extra]
-header = { title = "Hi, I'm YOUR_NAME! 👋", img = "img/profile.webp", img_alt = "YOUR_NAME" }
+header = { title = "Hi, I'm Mostly Useless! 👋", img = "img/profile.webp", img_alt = "Useless" }
 section_path = "blog/_index.md"
 max_posts = 5
 +++
 
-Welcome to my personal site!
+Floccinaucinihilipilification is a 29-letter noun meaning the act or habit of estimating something as worthless or valueless.
