@@ -25,6 +25,7 @@ jobs:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          fingerprint: ${{ secrets.SSH_FINGERPRINT }}
           source: "public/*"
           target: ${{ secrets.TARGET_DIR }}
           strip_components: 1  # Removes "public/" from the path during copy
