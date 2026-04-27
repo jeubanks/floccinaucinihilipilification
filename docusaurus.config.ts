@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Floccinaucinihilipilification',
   tagline: 'A running blog and project tracker',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -29,6 +29,8 @@ const config: Config = {
     defaultLocale: 'en',
     locales: ['en'],
   },
+
+  plugins: ['./plugins/recent-blog-posts'],
 
   presets: [
     [
@@ -56,15 +58,14 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/social-card.jpg',
+    image: 'img/logo.svg',
     colorMode: {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Flocci',
+      title: 'flocci',
       logo: {
-        alt: 'Flocci logo',
+        alt: 'flocci terminal logo',
         src: 'img/logo.svg',
       },
       items: [
@@ -84,7 +85,7 @@ const config: Config = {
           title: 'Tracker',
           items: [
             {
-              label: 'Overview',
+              label: 'Tracker',
               to: '/docs/intro',
             },
             {

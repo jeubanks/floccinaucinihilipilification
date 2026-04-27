@@ -1,0 +1,271 @@
+/**
+ * Terminal-style theme
+ */
+
+:root {
+  /* ── Fonts ── */
+  --ifm-font-family-base: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', monospace;
+  --ifm-heading-font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', monospace;
+  --ifm-font-size-base: 0.9rem;
+  --ifm-line-height-base: 1.7;
+
+  /* ── Primary palette ── */
+  --ifm-color-primary: #1B35CC;
+  --ifm-color-primary-dark: #1830b8;
+  --ifm-color-primary-darker: #162dae;
+  --ifm-color-primary-darkest: #12258f;
+  --ifm-color-primary-light: #1e3ae0;
+  --ifm-color-primary-lighter: #203de8;
+  --ifm-color-primary-lightest: #2c48f0;
+
+  /* ── Code ── */
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(27, 53, 204, 0.08);
+
+  /* ── Navbar ── */
+  --ifm-navbar-background-color: #ffffff;
+  --ifm-navbar-shadow: none;
+  --ifm-navbar-link-color: #1c1e21;
+  --ifm-navbar-link-hover-color: #1B35CC;
+  --ifm-navbar-link-active-color: #1B35CC;
+
+  /* ── Sidebar ── */
+  --ifm-menu-color-active: #1B35CC;
+  --ifm-menu-color-background-active: rgba(27, 53, 204, 0.08);
+  --ifm-menu-color-background-hover: rgba(27, 53, 204, 0.05);
+
+  /* ── Links ── */
+  --ifm-link-color: #1B35CC;
+  --ifm-link-hover-color: #1830b8;
+
+  /* ── Table of contents ── */
+  --ifm-toc-link-color: #555;
+  --ifm-toc-border-color: #e3e7f0;
+}
+
+[data-theme='dark'] {
+  /* ── Dark background ── */
+  --ifm-background-color: #0d0d0d;
+  --ifm-background-surface-color: #1a1a1a;
+  --ifm-card-background-color: #1a1a1a;
+  --ifm-footer-background-color: #111;
+  --ifm-font-color-base: #c8c8c8;
+  --ifm-font-color-secondary: #888;
+
+  /* ── Primary palette ── */
+  --ifm-color-primary: #7eb3ff;
+  --ifm-color-primary-dark: #5d9eff;
+  --ifm-color-primary-darker: #4d94ff;
+  --ifm-color-primary-darkest: #1a76ff;
+  --ifm-color-primary-light: #9fc4ff;
+  --ifm-color-primary-lighter: #afceff;
+  --ifm-color-primary-lightest: #d0e4ff;
+
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* ── Navbar ── */
+  --ifm-navbar-background-color: #1a1a1a;
+  --ifm-navbar-link-hover-color: #7eb3ff;
+  --ifm-navbar-link-active-color: #7eb3ff;
+
+  /* ── Sidebar ── */
+  --ifm-menu-color: #888;
+  --ifm-menu-color-active: #7eb3ff;
+  --ifm-menu-color-background-active: rgba(126, 179, 255, 0.1);
+  --ifm-menu-color-background-hover: rgba(126, 179, 255, 0.06);
+
+  /* ── Links ── */
+  --ifm-link-color: #7eb3ff;
+  --ifm-link-hover-color: #9fc4ff;
+
+  /* ── TOC ── */
+  --ifm-toc-link-color: #666;
+  --ifm-toc-border-color: #333;
+}
+
+/* ── Navbar ── */
+.navbar {
+  border-bottom: 1px solid #e3e7ec;
+  box-shadow: none;
+}
+
+[data-theme='dark'] .navbar {
+  border-bottom-color: #333;
+}
+
+.navbar__title {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.navbar__link {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+[data-theme='dark'] .navbar__link {
+  color: #888 !important;
+}
+
+[data-theme='dark'] .navbar__link:hover,
+[data-theme='dark'] .navbar__link--active {
+  color: #7eb3ff !important;
+}
+
+/* ── Sidebar ── */
+.menu__link--active {
+  font-weight: 600;
+  border-left: 3px solid #1B35CC;
+  padding-left: 9px;
+}
+
+[data-theme='dark'] .menu__link--active {
+  border-left-color: #7eb3ff;
+}
+
+.menu__link {
+  font-size: 0.82rem;
+}
+
+/* ── Headings: terminal comment style ── */
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  font-weight: 600;
+}
+
+[data-theme='dark'] .markdown h1,
+[data-theme='dark'] .markdown h2 {
+  color: #6a9955;
+}
+
+[data-theme='dark'] .markdown h3,
+[data-theme='dark'] .markdown h4 {
+  color: #c8c8c8;
+}
+
+/* ── Inline code ── */
+.markdown code {
+  background: rgba(27, 53, 204, 0.06);
+  border: 1px solid rgba(27, 53, 204, 0.12);
+  color: #1B35CC;
+  font-size: 0.85em;
+}
+
+[data-theme='dark'] .markdown code {
+  background: rgba(126, 179, 255, 0.08);
+  border-color: #333;
+  color: #7eb3ff;
+}
+
+/* ── Code blocks ── */
+[data-theme='dark'] .prism-code {
+  background: #111 !important;
+  border: 1px solid #333;
+}
+
+/* ── Blog post styling ── */
+.blog-post-page article,
+.blog-list-page article {
+  font-size: 0.88rem;
+}
+
+[data-theme='dark'] .blog-post-page article header h1,
+[data-theme='dark'] .blog-list-page article header h2 a {
+  color: #6a9955;
+}
+
+[data-theme='dark'] .blog-post-page article header time,
+[data-theme='dark'] .blog-list-page article header time {
+  color: #666;
+}
+
+/* ── Blog sidebar / tag list ── */
+[data-theme='dark'] .blog-tags a {
+  color: #7eb3ff;
+}
+
+/* ── Lists ── */
+[data-theme='dark'] .markdown ul,
+[data-theme='dark'] .markdown ol {
+  color: #c8c8c8;
+}
+
+[data-theme='dark'] .markdown li::marker {
+  color: #666;
+}
+
+/* ── Horizontal rules ── */
+[data-theme='dark'] .markdown hr {
+  border-color: #333;
+}
+
+/* ── Blockquotes ── */
+[data-theme='dark'] .markdown blockquote {
+  border-left-color: #333;
+  color: #888;
+}
+
+/* ── Tables ── */
+[data-theme='dark'] .markdown table {
+  border-color: #333;
+}
+
+[data-theme='dark'] .markdown table th {
+  background: #1a1a1a;
+  color: #7eb3ff;
+}
+
+[data-theme='dark'] .markdown table td {
+  border-color: #333;
+}
+
+/* ── Strong/bold ── */
+[data-theme='dark'] .markdown strong {
+  color: #e0e0e0;
+}
+
+/* ── Pagination ── */
+[data-theme='dark'] .pagination-nav__link {
+  border-color: #333;
+}
+
+[data-theme='dark'] .pagination-nav__link:hover {
+  border-color: #7eb3ff;
+}
+
+[data-theme='dark'] .pagination-nav__sublabel {
+  color: #666;
+}
+
+[data-theme='dark'] .pagination-nav__label {
+  color: #c8c8c8;
+}
+
+/* ── Footer ── */
+[data-theme='dark'] .footer {
+  background: #111;
+  border-top: 1px solid #333;
+}
+
+[data-theme='dark'] .footer__title {
+  color: #6a9955;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+[data-theme='dark'] .footer__link-item {
+  color: #888;
+  font-size: 0.82rem;
+}
+
+[data-theme='dark'] .footer__link-item:hover {
+  color: #7eb3ff;
+}
+
+[data-theme='dark'] .footer__copyright {
+  color: #444;
+  font-size: 0.75rem;
+}

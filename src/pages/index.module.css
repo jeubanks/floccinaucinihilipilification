@@ -1,0 +1,106 @@
+/* ── Page ── */
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 60px);
+  padding: 3rem 1.5rem;
+  background: #0d0d0d;
+}
+
+/* ── Terminal window ── */
+.terminal {
+  width: 100%;
+  max-width: 640px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.termBar {
+  display: flex;
+  gap: 6px;
+  padding: 10px 14px;
+  background: #252525;
+  border-bottom: 1px solid #333;
+}
+
+.termDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #444;
+}
+
+.termBody {
+  padding: 1.25rem 1.5rem;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', monospace;
+  font-size: 0.82rem;
+  line-height: 1.65;
+}
+
+/* ── Text styles ── */
+.line {
+  color: #c8c8c8;
+  white-space: pre;
+}
+
+.comment {
+  color: #6a9955;
+}
+
+.accent {
+  color: #7eb3ff;
+}
+
+.dim {
+  color: #666;
+}
+
+.postLink {
+  color: #7eb3ff;
+  text-decoration: none;
+}
+
+.postLink:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* ── Nav links ── */
+.links {
+  margin-top: 1.5rem;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: 0.82rem;
+}
+
+.links a {
+  color: #7eb3ff;
+  text-decoration: none;
+}
+
+.links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.sep {
+  color: #444;
+  margin: 0 0.6rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 680px) {
+  .termBody {
+    padding: 1rem;
+    font-size: 0.72rem;
+  }
+}
+
+/* ── Hide Docusaurus footer on landing ── */
+:global(.footer) {
+  display: none;
+}
