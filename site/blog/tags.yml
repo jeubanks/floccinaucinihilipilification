@@ -1,0 +1,19 @@
+homecore:
+  label: homeCore
+  permalink: /homecore
+  description: Updates on the homeCore project
+
+project:
+  label: Project
+  permalink: /project
+  description: Project updates and milestones
+
+status:
+  label: Status
+  permalink: /status
+  description: Current status notes
+
+launch:
+  label: Launch
+  permalink: /launch
+  description: Launch updates

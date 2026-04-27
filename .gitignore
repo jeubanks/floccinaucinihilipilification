@@ -1,2 +1,7 @@
-public/
+node_modules/
+.docusaurus/
+build/
 .DS_Store
+*.log
+.env
+.env.*
