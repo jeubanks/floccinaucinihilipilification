@@ -1,0 +1,14 @@
+[
+  {
+    "name": "homeCore",
+    "description": "Home automation in Rust. One binary, no cloud.",
+    "status": "active",
+    "url": "https://homecore.io"
+  },
+  {
+    "name": "this site",
+    "description": "Personal blog and project tracker.",
+    "status": "active",
+    "url": "/docs/projects"
+  }
+]

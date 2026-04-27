@@ -17,3 +17,8 @@ launch:
   label: Launch
   permalink: /launch
   description: Launch updates
+
+github:
+  label: GitHub
+  permalink: /github
+  description: GitHub and CI/CD related posts
